@@ -1,0 +1,49 @@
+mutation CreateProductAndBill($productInput: CreateProductInput!, $billInput: CreateBillInput!){
+    createProduct(input: $productInput){
+      product{
+        id
+        product
+        price
+      }
+    }
+    createBill(input: $billInput){
+      bill{
+        id,
+        bill
+      }
+    }
+  }
+  
+  mutation CreateBillProduct($billProductInput: CreateBillProductInput!){
+    createBillProduct(input: $billProductInput){
+      billProduct{
+        id
+        productId
+        billId
+      }
+    }
+  }
+
+
+{
+  "productInput": {
+    "product": {
+      "product": "bathing",
+      "price": 30.00
+    }
+  },
+  "billInput": {
+    "bill": {
+      "bill": "bath & body works"
+      
+    }
+  },
+  "billProductInput": {
+    "billProduct": {
+      "productId": 12,
+      "billId": 13
+    }
+  }
+}
+
+
