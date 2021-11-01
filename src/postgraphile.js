@@ -1,4 +1,5 @@
-const { postgraphile } = require('postgraphile')
+const { postgraphile } = require('postgraphile');
+const PostGraphileNestedMutations = require('postgraphile-plugin-nested-mutations');
 
 const { DATABASE, PG_USER, PASSWORD, HOST, PG_PORT } = process.env
 
@@ -12,6 +13,7 @@ module.exports = postgraphile(
     },
     'learn',
     {
+        appendPlugins: [PostGraphileNestedMutations],
         watchPg: true,
         graphiql: true,
         enhanceGraphiql: true,

@@ -47,3 +47,42 @@ mutation CreateProductAndBill($productInput: CreateProductInput!, $billInput: Cr
 }
 
 
+// ===============================
+
+mutation CreateBillProduct($input:CreateBillProductInput!){
+  createBillProduct(input: $input){
+    productByProductId{
+      price
+      productName
+    }
+    billByBillId{
+      billName
+      billdate
+    }
+    billProductEdge{
+      node{
+        id
+        billId
+        productId
+      }
+    }
+  }
+}
+
+{
+  "input": {
+    "billProduct": {
+      "billToBillId": {
+        "create": {
+          "billName": "elctronics"
+        }
+      },
+      "productToProductId": {
+        "create": {
+          "productName": "tv",
+          "price": 800.00
+        }
+      }
+    }
+  }
+}

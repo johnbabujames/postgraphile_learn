@@ -686,7 +686,7 @@ graceful-fs@^4.1.2:
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.2.8.tgz#e412b8d33f5e006593cbd3cee6df9f2cebbe802a"
   integrity sha512-qkIilPUYcNhJpd33n0GBXTB1MMPp14TxEsEs0pTrsSVucApsYzW5V+Q8Qxhik6KU3evy+qkAAowTByymK0avdg==
 
-graphile-build-pg@4.12.2:
+graphile-build-pg@4.12.2, graphile-build-pg@^4.11.2:
   version "4.12.2"
   resolved "https://registry.yarnpkg.com/graphile-build-pg/-/graphile-build-pg-4.12.2.tgz#b816824488ba97f797f61c7d129e10e21fe64638"
   integrity sha512-4zWS7yb2L3afNpzADX9iBc2do4UOd3abiHd/WG0ao8lharU4YxEDS5qKlE2/2s+gSNqW2okKXEuI1/ci9DXVbw==
@@ -1378,6 +1378,13 @@ postgraphile-core@4.12.2:
     graphile-build "4.12.2"
     graphile-build-pg "4.12.2"
     tslib "^2.0.1"
+
+postgraphile-plugin-nested-mutations@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/postgraphile-plugin-nested-mutations/-/postgraphile-plugin-nested-mutations-1.1.0.tgz#01a0eca381abba4b88158d3ad8b11be5da173ce4"
+  integrity sha512-zG2OICwWWN6qWeM+9tErE7IjhvaGg+40GU/dgEk/nKE1aG9hoKaSw5q7H51/1XVKwEvSgLo3ERMfUA/agIXzdg==
+  dependencies:
+    graphile-build-pg "^4.11.2"
 
 postgraphile@^4.12.5:
   version "4.12.5"

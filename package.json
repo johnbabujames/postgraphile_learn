@@ -5,8 +5,8 @@
   "license": "MIT",
   "main": "src/index.js",
   "scripts": {
-      "start": "node src/index.js",
-      "watch": "nodemon src/index.js"
+    "start": "node src/index.js",
+    "watch": "nodemon src/index.js"
   },
   "dependencies": {
     "body-parser": "^1.19.0",
@@ -15,7 +15,8 @@
     "db-migrate-pg": "^1.2.2",
     "express": "^4.17.1",
     "pg": "^8.7.1",
-    "postgraphile": "^4.12.5"
+    "postgraphile": "^4.12.5",
+    "postgraphile-plugin-nested-mutations": "^1.1.0"
   },
   "devDependencies": {
     "dotenv": "^10.0.0",
